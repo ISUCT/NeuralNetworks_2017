@@ -11,6 +11,7 @@ end
 y1 = yCalc(x,a);
 y2 = yCalc(X,a);
 
+
 plot(x,y1,'r:o','LineWidth',3)
 title('First lab part A')
 xlabel('x')
