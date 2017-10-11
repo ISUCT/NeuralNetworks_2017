@@ -1,20 +1,19 @@
-a = 2; 
-b = 4.1;
-xn=0.77; 
-xk=1.77; 
-dx=0.2;
-X=[1.24,1.38,2.38,3.21,0.68]; 
+b = 2.5;
+xn=1.28; 
+xk=3.28; 
+dx=0.4;
+X=[1.1,2.4,3.6,1.7,3.9]; 
 X=sort(X);
 x=xn:dx:xk;
 
-function yres=yCalc(x,a,b)
-  chisl = log(b^2 - x.^2)/log(a);
-  znam = (abs(x.^2 - a^2)).^(1/3);
+function yres=yCalc(x,b)
+  chisl = 1 + sin(b.^3 + x.^3);
+  znam = (abs(b.^3 + x.^3)).^(1/3);
   yres = chisl./znam;
 end
 
-y1 = yCalc(x,a,b);
-y2 = yCalc(X,a,b);
+y1 = yCalc(x,b);
+y2 = yCalc(X,b);
 
 plot(x,y1,'r:o','LineWidth',3)
 title('First lab part A')
