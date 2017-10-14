@@ -8,8 +8,8 @@ x=xn:dx:xk;
 function yres=yCalc(x,a,b)
   yres = a.^(x.^2-1)-log10(x.^2-1)+(x.^2-1).^1/3;
 end
-y1 = yCalc(x,a);
-y2 = yCalc(X,a);
+y1 = yCalc(x,a,b);
+y2 = yCalc(X,a,b);
 
 
 plot(x,y1,'r:o','LineWidth',3)
