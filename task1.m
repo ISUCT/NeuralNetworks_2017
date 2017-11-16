@@ -1,11 +1,18 @@
-a = 2; 
-b = 4.1;
-xn=0.77; 
-xk=1.77; 
-dx=0.2;
-X=[1.24,1.38,2.38,3.21,0.68]; 
+a = 0.05; 
+b = 0.06;
+xn=0.2; 
+xk=0.95; 
+dx=0.15;
+X=[0.15,0.26,0.37,0.48,0.68]; 
 X=sort(X);
 x=xn:dx:xk;
+<<<<<<< HEAD
+function yres=yCalc(x,a,b)
+  chisl = acos(x.^2-b.^2);
+  znam = asin(x.^2-a.^2);
+  yres = chisl./znam;
+end
+=======
 
 function yres=yCalc(x,a,b)
   chisl = log(b^2 - x.^2)/log(a);
@@ -13,6 +20,7 @@ function yres=yCalc(x,a,b)
   yres = chisl./znam;
 end
 
+>>>>>>>
 y1 = yCalc(x,a,b);
 y2 = yCalc(X,a,b);
 
@@ -25,6 +33,10 @@ grid on;
 hold on;
 
 plot(X,y2,'b-*','LineWidth',3)
+<<<<<<< HEAD
+title('First lab part B')
+=======
 title('First lab part B')
 
 
+>>>>>>>
