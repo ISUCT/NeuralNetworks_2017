@@ -1,0 +1,26 @@
+a = 1.6; 
+xn= 1.2; 
+xk=3.7; 
+dx=0.5;
+X=[1.28,1.36,2.47,3.68,4.56]; 
+X=sort(X);
+x=xn:dx:xk;
+
+y1 = yCalc(x,a,b);
+y2 = yCalc(X,a,b);
+
+plot(x,y1,'r:o','LineWidth',3)
+title('First lab part A')
+xlabel('x')
+ylabel('y1')
+grid on;
+
+hold on;
+
+plot(X,y2,'b-*','LineWidth',3)
+title('First lab part B')
+
+
+function yres=yCalc(x,a,b)
+  chisl = a^(x.2-1)-lg(x.^2-1);
+end
